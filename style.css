@@ -17,9 +17,6 @@ body{
     margin:0;
     padding: 20px;
   }
-  a {
-    color:black;
-  }
   #grid {
       display: grid;
       grid-template-columns: 150px 1fr;
