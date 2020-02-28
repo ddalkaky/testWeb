@@ -4,32 +4,39 @@
   <title>WEB1 - html</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+  <script>
+    function setColor(color) {
+      var alist = document.querySelectorAll('a');
+        var index = 0;
+        while(index < alist.length){
+          alist[index].style.color = color;
+          index++;
+        }
+    }
+    function nightDayHandler(self) {
+      var target = document.querySelector('body');
+      if(self.value ==='night'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        self.value = 'day'
+        
+        setColor('powerblue');
+
+      } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        self.value = 'night'
+
+        setColor('blue');
+      }
+    }
+    
+  </script>
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
   <input id= "night_day" type="button" value="night" onclick="
-    var target = document.querySelector('body');
-    if(this.value ==='night'){
-      target.style.backgroundColor = 'black';
-      target.style.color = 'white';
-      this.value = 'day'
-      var alist = document.querySelectorAll('a');
-      var index = 0;
-      while(index < alist.length){
-        alist[index].style.color = 'powderblue';
-        index++;
-      }
-    } else {
-      target.style.backgroundColor = 'white';
-      target.style.color = 'black';
-      this.value = 'night'
-      var alist = document.querySelectorAll('a');
-      var index = 0;
-      while(index < alist.length){
-        alist[index].style.color = 'blue';
-        index++;
-      }
-    }
+    nightDayHandler(this);
   ">
   <div id="grid">
     <ol>
