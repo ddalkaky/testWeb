@@ -4,34 +4,8 @@
   <title>WEB1 - html</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
-  <script>
-    function setColor(color) {
-      var alist = document.querySelectorAll('a');
-        var index = 0;
-        while(index < alist.length){
-          alist[index].style.color = color;
-          index++;
-        }
-    }
-    function nightDayHandler(self) {
-      var target = document.querySelector('body');
-      if(self.value ==='night'){
-        target.style.backgroundColor = 'black';
-        target.style.color = 'white';
-        self.value = 'day'
-        
-        setColor('powerblue');
-
-      } else {
-        target.style.backgroundColor = 'white';
-        target.style.color = 'black';
-        self.value = 'night'
-
-        setColor('blue');
-      }
-    }
-    
-  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="colors.js"></script>
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
